@@ -1,5 +1,7 @@
+const db = require('./db.js')
+
 const Query = {
-    greeting: () => `Hello World from Job Board.`
+    jobs: () => db.jobs.list()
 }
 
 module.exports = {Query};
