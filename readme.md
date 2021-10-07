@@ -28,11 +28,11 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 ## Dependencies
 
 What you'll need to start...
-    + A computer running Windows, Linux, or macOS
-    + A web browser preferably Google Chrome 
-    + For NodeJs examples, a recent version of Node installation. 
-    + Your favorite code editor. 
-    + For examples using Apollo Server, you'll need to install the following dependency: 
++ A computer running Windows, Linux, or macOS
++ A web browser preferably Google Chrome 
++ For NodeJs examples, a recent version of Node installation. 
++ Your favorite code editor. 
++ For examples using Apollo Server, you'll need to install the following dependency: 
 
  ```npm install apollo-server apollo-server-express graphql --save```
 
