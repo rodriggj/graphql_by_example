@@ -3,7 +3,7 @@
 ## What is GraphQL 
 Graphql is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of your data in your API, gives the client the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables the power of developer tools.
 
-## Why do you need GraphQL (as opposed to using REST or other query languages...)
+## Why do you need GraphQL vs some alternative?
 1. You can query for exactly what you need (no Overfetching). 
 
     > The client (not the server) will dictate exactly what is needed in the API request.
@@ -27,15 +27,16 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 
 ## Dependencies
 
-1. A computer running Windows, Linux, or macOS
-2. A web browser preferably Google Chrome 
-3. For NodeJs examples, a recent version of Node installation. 
-4. Your favorite code editor. 
-5. For examples using Apollo Server,
+What you'll need to start...
+    + A computer running Windows, Linux, or macOS
+    + A web browser preferably Google Chrome 
+    + For NodeJs examples, a recent version of Node installation. 
+    + Your favorite code editor. 
+    + For examples using Apollo Server, you'll need to install the following dependency: 
 
  ```npm install apollo-server apollo-server-express graphql --save```
 
  ## Defining a Schema
 
+ ### Serving over HTTP
 
- 
