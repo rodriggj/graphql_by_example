@@ -27,16 +27,45 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 
 ## Dependencies
 
+> The examples from this point forward will be implemented using Nodejs. You can use whatever runtime you would like, __you are not bound to Nodejs__, but if you want to follow the examples, you'll need the following dependencies. 
+
 What you'll need to start...
 + A computer running Windows, Linux, or macOS
 + A web browser preferably Google Chrome 
-+ For NodeJs examples, a recent version of Node installation. 
 + Your favorite code editor. 
-+ For examples using Apollo Server, you'll need to install the following dependency: 
-
- ```npm install apollo-server apollo-server-express graphql --save```
++ Installation of [NodeJs](https://nodejs.org/en/)
 
  ## Defining a Schema
 
- ### Serving over HTTP
+1. Here we will create a project called `hello-world`. Open your code editor and in a terminal session initialize a NodeJs project with the following command: 
 
+```javascript 
+mkdir hello-world-server
+cd hello-world-server
+npm init
+```
+
+2. Initiallize the following package dependencies with the following command: 
+
+```javascript 
+npm install apollo-server graphql --save
+```
+
+3. Now the the directory structure is in place, a package.json file is created to manage dependencies, and our dependencies have been installed -- we will start our GraphQL process by defining a `Schema`. To do  this, create a new file called `server.js` and open this file in your code editor. 
+
+```javascript 
+code server.js
+```
+
+4. In the _server.js_ file, we will create a variable called `typeDefs`, short for _Type Definitions_. Here we will use a special language called, _GraphQL Schema Definition Language (SDL)_, to create our Type Definitions. It is much like defining classes, but instead of utilizing the _class_ keyword, we are using _type_. So in this example we are defining a _type_ of _Query_. Make note of the _template string literal_ single quote marks used for the sake of creating a multi-line definition. 
+
+Inside the curly brackets we define the _fields_ that belong to this _Type_. 
+
+```javascript
+const typeDefs = `
+    type Query{
+        greeting: String
+    }
+`
+
+> _This Code Reads Like ..._: a client may issue a request of Type _query_ to the GraphQL Server. When the GraphQL server receives this request it is to return a String, called "Greeting" as a response to this query. This definition is known as a _Schema_.
