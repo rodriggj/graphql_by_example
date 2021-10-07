@@ -37,6 +37,8 @@ What you'll need to start...
 
  ## Defining a Schema
 
+ > Recognize and continue to remind yourself that there are only 2 actors from here forward: 1. `a Client` & 2. `a GraphQL Server`. So as we define a `Schema` realize that we are defining a preconditioned response from the server for any call coming from the client. 
+
 1. Here we will create a project called `hello-world`. Open your code editor and in a terminal session initialize a NodeJs project with the following command: 
 
 ```javascript 
@@ -57,15 +59,67 @@ npm install apollo-server graphql --save
 code server.js
 ```
 
-4. In the _server.js_ file, we will create a variable called `typeDefs`, short for _Type Definitions_. Here we will use a special language called, _GraphQL Schema Definition Language (SDL)_, to create our Type Definitions. It is much like defining classes, but instead of utilizing the _class_ keyword, we are using _type_. So in this example we are defining a _type_ of _Query_. Make note of the _template string literal_ single quote marks used for the sake of creating a multi-line definition. 
+4. In the _server.js_ file, we will create a variable called `typeDefs`, short for _Type Definitions_. Here we will use a special language called, _GraphQL Schema Definition Language (SDL)_, to create our Type Definitions. It is much like defining classes, but instead of utilizing the _class_ keyword, we are using _type_. 
 
-Inside the curly brackets we define the _fields_ that belong to this _Type_. 
+So in this example we are defining a _type_ of _Query_. Make note of the _template literal_ back-tick marks used for the sake of creating a multi-line definition. Inside the curly brackets we define the _fields_ that belong to this _Type_. 
 
 ```javascript
 const typeDefs = `
     type Query{
         greeting: String
     }
-`
+`;
+```
 
-> _This Code Reads Like ..._: a client may issue a request of Type _query_ to the GraphQL Server. When the GraphQL server receives this request it is to return a String, called "Greeting" as a response to this query. This definition is known as a _Schema_.
+> _This Code Reads Like ..._: a client may issue a query to the GraphQL Server. When the GraphQL server receives this request it is to return a String, called "Greeting". This definition is known as a _Schema_.
+
+5. The schema that we just defined needs to be parsed by the GraphQL server. The GraphQL server doesn't intrinsically know how to do this, so we need to import function _gql_ from the `apollo-server` module to do this. The _gql_ is a `tag function` which allows us to _tag_ a template literal -- place the _gql_ tag in front our our template literal quotes.  
+
+```javascript
+const { gql } = require('apollo-server');
+
+const typeDefs = gql`
+    type Query{
+        greeting: String
+    }
+`;
+```
+
+> Note that the `gql` tag, parses the _template literal_ into the GraphQL, creating an Object known as a `DocumentNode`. You can validate this by adding a `console.log(typeDefs)`, and running the `server.js` file. Doing so will produce a result like the following in the console: 
+
+```javascript
+// Add a console.log() to the server.js file
+const { gql } = require('apollo-server');
+
+const typeDefs = gql`
+    type Query{
+        greeting: String
+    }
+`;
+
+console.log(typeDefs)
+```
+
+```s
+# Run the server.js file
+node server.js
+```
+
+```javascript
+{
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'ObjectTypeDefinition',
+      description: undefined,
+      name: [Object],
+      interfaces: [],
+      directives: [],
+      fields: [Array]
+    }
+  ],
+  loc: { start: 0, end: 48 }
+}
+```
+
+> The above is an Abstract Syntax Tree of the GraphQL code we wrote. 
