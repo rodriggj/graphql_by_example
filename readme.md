@@ -155,3 +155,45 @@ const resolvers = {
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/136486908-18cb9b54-2bb7-4f73-9ff7-8c227c956b23.png" width="450"/></p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/136487258-1c852534-8c1b-4129-9a14-78d944d6adea.png" width="450"/></p>
+
+## Defining a Schema
+
+1. Now that we've defined a _schema_ and created an implementation method, our _resolver_ we now need some service to handle running this code, our _server_. 
+
+To instantiate our _server_ there are a few things we need to do. The first is to import, the _ApolloServer_ class available to us from the _apollo-server_ module we installed. We have already used the `gql` tag function from this module, so we simply need to edit the existing _require_ statement at the top of our file. 
+
+```javascript
+// Was 
+const { gql } = require('apollo-server')
+
+// Update to ...
+const { ApolloServer, gql } = require('apollo-server')
+```
+
+2. We now need to utilize this _ApolloServer_ class to create our server. First, lets assign our new Class to a variable, _server_. Our _ApolloServer_ class utilizes a constructor, where in the parameters it is expecting an Object, where you can pass configuration properties. Here we will pass our Object, our _typeDefs_ & our _resolvers_. 
+
+```javascript
+const server = new ApolloServer({ typeDefs: typeDefs, resolvers: resolvers })
+
+// Because the property names match our value names, in javascript we can use short-hand and simply write the following: 
+const server = new ApolloServer({ typeDefs, resolvers })
+```
+
+3. Finally, we can call the _listen()_ method on our _server_ variable, and explicitly set the listening port to _9000_. The _listen_ method will return a _Promise_, so we can chain onto our Promise a _.then()_ function which will take _serverInfo_ as an arguement and log a message to the console, via a callback method. 
+
+```javascript 
+server.listen({port:9000})
+    .then((serverInfo) => console.log(`Server Running at: ${serverInfo.url}`))
+
+// Again using a short-hand notation we can use descructuring to simply pull back the url info 
+server.listen({port:9000})
+    .then(({url})=> console.log(`Server Running at: ${url}`))
+```
+
+4. Finally we can run our server using Nodejs on our _server.js_ file. In the console you should see the url that will allow you to access your content in a browser. If you go to this url, you should see a view similiar to the one presented below. 
+
+```javscript 
+node server.js
+```
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/136555362-eb4f4a4b-a66e-403a-b386-b5f484f5bca7.png" width="450"/></p>
