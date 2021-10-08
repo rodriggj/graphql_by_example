@@ -6,4 +6,10 @@ const typeDefs = gql`
     }
 `;
 
+const resolvers = {
+    Query: {
+        greeting: () => 'Hello from GraphQL Server.'
+    }
+}
+
 console.log(typeDefs)

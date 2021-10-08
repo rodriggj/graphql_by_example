@@ -152,3 +152,6 @@ const resolvers = {
 
 > _This Code Reads Like ..._: Everytime a client makes a _Query_ to the GraphQL server, a reference to the greeting schema will be implemented via a _resolver function_ which returns a string. 
 
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/136486908-18cb9b54-2bb7-4f73-9ff7-8c227c956b23.png" width="450"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/136487258-1c852534-8c1b-4129-9a14-78d944d6adea.png" width="450"/></p>
