@@ -122,4 +122,33 @@ node server.js
 }
 ```
 
-> The above is an Abstract Syntax Tree of the GraphQL code we wrote. 
+> The above is an Abstract Syntax Tree of the GraphQL code we wrote. This shows that the _template literal_ string has been parsed by the gql function and returned a _ObjectTypeDefinition_ (aka Schema) that GraphQL Server will use to respond to query requests. 
+
+> NOTE: You can now comment out or remove the `console.log()` from the schema definition.
+
+## Defining a Resolver 
+
+So the schema will define __What__ needs to be returned when a Query is made by a client to the GraphQL server, but what about the __HOW__ (aka the implementation)? How will the query execute? This question is answered with a _Resolver Function_. 
+
+1. Within the _server.js_ file, lets create our _resolver function_. Start by definiing an Object literal called `resolvers`
+
+```javascript
+const resolvers = {
+
+}
+```
+
+2. This `resolvers` Object needs to match out Type Defiinition, therefore we need a property called _Query_. _Query_ will be a nested Object, because it represents a _Type_. The _Query_ Object will also have a property called _greeting_ just like the field we declared in the _typeDefs_. 
+
+Here _greeting_ will be assigned to a function, that will be the implementation for any query request to the GraphQL server. In this case _greeting_ returns a String literal. 
+
+```javascript 
+const resolvers = {
+    Query: {
+        greeting: () => 'Hello from the GraphQL Server'
+    }
+}
+```
+
+> _This Code Reads Like ..._: Everytime a client makes a _Query_ to the GraphQL server, a reference to the greeting schema will be implemented via a _resolver function_ which returns a string. 
+
