@@ -156,7 +156,7 @@ const resolvers = {
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/136487258-1c852534-8c1b-4129-9a14-78d944d6adea.png" width="450"/></p>
 
-## Defining a Schema
+## Creating a Server
 
 1. Now that we've defined a _schema_ and created an implementation method, our _resolver_ we now need some service to handle running this code, our _server_. 
 
