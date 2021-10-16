@@ -4,6 +4,14 @@
 Graphql is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of your data in your API, gives the client the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables the power of developer tools.
 
 ## Why do you need GraphQL vs some alternative?
+
+>**RESTful Routing**
+>Given a collection of records on a server, there should be a uniform URL & HTTP request method used to utilize that collection of records.
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595313-83c34cc6-df70-4ee2-8c64-cb5fd185b675.png" width="450"/></p>
+
+>**So what's the problem?**
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595391-59d1c5c2-8964-498d-bc3d-f84399955782.png" width="450"/></p>
+
 1. You can query for exactly what you need (no Overfetching). 
 
     > The client (not the server) will dictate exactly what is needed in the API request.
