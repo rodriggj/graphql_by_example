@@ -14,6 +14,8 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595535-c5eff693-b566-42f0-8742-a37bd1018663.png" width="450"/></p>
 
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595687-8c3a4e8e-dca0-4fe2-b33a-24d7f40d83a0.png" width="450"/></p>
+
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595391-59d1c5c2-8964-498d-bc3d-f84399955782.png" width="450"/></p>
 
 1. You can query for exactly what you need (no Overfetching). 
