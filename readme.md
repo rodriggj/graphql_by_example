@@ -17,7 +17,8 @@ Nested RESTful resources
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595391-59d1c5c2-8964-498d-bc3d-f84399955782.png" width="450"/></p>
 
 >**So what's the problem?**
->It's `NOT` REST ... its the complexity of mapping relational data
+>It's `NOT` REST ... 
+>The complexity of mapping/rendering relational data is increasing
 
 >**Consider the following example...**
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595535-c5eff693-b566-42f0-8742-a37bd1018663.png" width="450"/></p>
