@@ -17,8 +17,9 @@ Nested RESTful resources
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595391-59d1c5c2-8964-498d-bc3d-f84399955782.png" width="450"/></p>
 
 >**So what's the problem?**
->Complexity of nested resources and RESTful conventions...
+>It's `NOT` REST ... its the complexity of mapping relational data
 
+>**Consider the following example...**
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595535-c5eff693-b566-42f0-8742-a37bd1018663.png" width="450"/></p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595687-8c3a4e8e-dca0-4fe2-b33a-24d7f40d83a0.png" width="450"/></p>
@@ -28,7 +29,7 @@ Nested RESTful resources
 >**Challenge...**
 > Use the RESTful convention, and write a an endpoint that will fetch the data needed to mimic the Friend / Company / Position relationship required for my front-end. Requirements: 1. ensure to use RESTful conventions, 2. ensure the solution is scalable (reusable / not custom) 3. supports developer-community / easily  consumable.
 
->**Observations**
+>**Observations...**
 
 1. Further the nesting goes ... the harder the convention is to follow ... 
 
