@@ -28,7 +28,7 @@ Nested RESTful resources
 
 >**Challenge...**
 > Use the RESTful convention, and write a an endpoint that will fetch the data needed to mimic the `User / Friend / Company / Position` relationship required for my front-end.
-> Requirements: 
+>*Requirements:* 
 > 1. ensure to use RESTful conventions (noun/verb convention, use of query params, etc)
 > 2. ensure the solution supports developer consumption (well documented, discoverable, versioned, etc)
 > 3. ensure the solution maximizes operational ownership as the API producer (easy to maintain, efficient change management, sufficient metadata, etc)
