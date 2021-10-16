@@ -10,7 +10,7 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/8760590/137595313-83c34cc6-df70-4ee2-8c64-cb5fd185b675.png" width="450"/>
-    <em>Single RESTful resource</em>
+    <p><em>Single RESTful resource</em></p>
 </p>
 
 
