@@ -9,9 +9,7 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 >Given a collection of records on a server, there should be a uniform URL & HTTP request method used to utilize that collection of records.
 
 <p align="center">
-    | <img src="https://user-images.githubusercontent.com/8760590/137595313-83c34cc6-df70-4ee2-8c64-cb5fd185b675.png" width="450"/> | 
-    |:--:| 
-    | *Single RESTful resource* |
+    <img src="https://user-images.githubusercontent.com/8760590/137595313-83c34cc6-df70-4ee2-8c64-cb5fd185b675.png" width="450"/>
 </p>
 
 
