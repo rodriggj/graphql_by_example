@@ -7,7 +7,10 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 
 >**RESTful Routing**
 >Given a collection of records on a server, there should be a uniform URL & HTTP request method used to utilize that collection of records.
+
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595313-83c34cc6-df70-4ee2-8c64-cb5fd185b675.png" width="450"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595391-59d1c5c2-8964-498d-bc3d-f84399955782.png" width="450"/></p>
 
 >**So what's the problem?**
 >Relationships amongst objects pose a Complexity / Scaling issue (Not a REST issue its a scaling issue)
@@ -16,7 +19,7 @@ Graphql is a query language for APIs and a runtime for fulfilling those queries 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595687-8c3a4e8e-dca0-4fe2-b33a-24d7f40d83a0.png" width="450"/></p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595391-59d1c5c2-8964-498d-bc3d-f84399955782.png" width="450"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595912-5e7e41ef-3e86-464e-a136-cd226415744c.png" width="450"/></p>
 
 1. You can query for exactly what you need (no Overfetching). 
 
