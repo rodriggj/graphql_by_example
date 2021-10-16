@@ -25,6 +25,30 @@ Nested RESTful resources
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/137595912-5e7e41ef-3e86-464e-a136-cd226415744c.png" width="450"/></p>
 
+>**Challenge...**
+> Use the RESTful convention, and write a an endpoint that will fetch the data needed to mimic the Friend / Company / Position relationship required for my front-end. Requirements: 1. ensure to use RESTful conventions, 2. ensure the solution is scalable (reusable / not custom) 3. supports developer-community / easily  consumable.
+
+>**Observations**
+
+1. Further the nesting goes ... the harder the convention is to follow ... 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137596575-d3c67d49-665d-46a4-8585-f978b8a4ae57.png" width="450"/></p>
+
+2. Quantity of requests increases ... `IMPACT: COST`
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137596680-bffd97c1-e407-4e7b-ac10-1ee503e00f12.png" width="450"/></p>
+
+3. Customized endpoints ... `IMPACT: Consumption / Documentation / Versioning / Maintanence`
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137596751-1ff5d926-7825-49b4-b2a8-bf4f1394f387.png" width="450"/></p>
+
+4. Break RESTful conventions ... `IMPACT: Why are you using REST?`
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137596921-2cc70f5e-85a2-4802-8e0f-ad31fad708f9.png" width="450"/></p>
+
+5. Overfetching data ... `IMPACT: Network, Security, Compliance, ETL, etc.`
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/137597001-93e69bf8-0b0d-40de-9629-6750d774b781.png" width="450"/></p>
+
+>**So why do you need GraphQL**
+
 1. You can query for exactly what you need (no Overfetching). 
 
     > The client (not the server) will dictate exactly what is needed in the API request.
