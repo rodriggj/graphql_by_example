@@ -198,7 +198,7 @@ node server.js
 
 So the schema will define __What__ needs to be returned when a Query is made by a client to the GraphQL server, but what about the __HOW__ (aka the implementation)? How will the query execute? This question is answered with a _Resolver Function_. 
 
-1. Within the _server.js_ file, lets create our _resolver function_. Start by definiing an Object literal called `resolvers`
+1. Within the _server.js_ file, lets create our _resolver function_. Start by defining an Object literal called `resolvers`
 
 ```javascript
 const resolvers = {
