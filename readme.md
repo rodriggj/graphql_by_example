@@ -1,5 +1,13 @@
 # GraphQL 
 
+> **OBJECTIVES**
+> The objective of this readme file is to provide a high-level starter GraphQL discovery. The readme file will provide an explanation of: 
+> 
+> 1. What is GraphQL
+> 2. How does it compare to alterantive API implmentation options -- specifically REST? 
+> 3. What are the benefits of GraphQL?
+> 4. What is the process of getting a GraphQL API created? 
+
 ## What is GraphQL 
 Graphql is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of your data in your API, gives the client the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables the power of developer tools.
 
@@ -75,7 +83,17 @@ Nested RESTful resources
 6. Bring your own code
     > GraphQL is a layer that sits on top of your existing code. All your data and business logic can stay the same within your application. You provide functions for each field in they type system and GraphQL executes the query. Language agnostic - GraphQL is an Open Specification with implmentations in several languages.
 
-## Dependencies
+## Creating an Happy-Path GraphQL API
+
+> Creating a GraphQL API is relatively straight-foward and follows a repeatable process. 
+> 
+> 1. Ensure that your environment has any needed _dependencies_ installed.
+> 2. Build your API _Schema_
+> 3. Build your _Resolver Functions_
+> 4. Configure the _Server_
+> 5. Execute Queries
+
+### 1. Account for Dependencies
 
 > The examples from this point forward will be implemented using Nodejs. You can use whatever runtime you would like, __you are not bound to Nodejs__, but if you want to follow the examples, you'll need the following dependencies. 
 
@@ -85,7 +103,7 @@ What you'll need to start...
 + Your favorite code editor. 
 + Installation of [NodeJs](https://nodejs.org/en/)
 
- ## Defining a Schema
+ ### 2. Defining a Schema
 
  > Recognize and continue to remind yourself that there are only 2 actors from here forward: 1. `a Client` & 2. `a GraphQL Server`. So as we define a `Schema` realize that we are defining a preconditioned response from the server for any call coming from the client. 
 
@@ -176,7 +194,7 @@ node server.js
 
 > NOTE: You can now comment out or remove the `console.log()` from the schema definition.
 
-## Defining a Resolver 
+### 3. Defining a Resolver 
 
 So the schema will define __What__ needs to be returned when a Query is made by a client to the GraphQL server, but what about the __HOW__ (aka the implementation)? How will the query execute? This question is answered with a _Resolver Function_. 
 
@@ -206,7 +224,7 @@ const resolvers = {
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/136487258-1c852534-8c1b-4129-9a14-78d944d6adea.png" width="450"/></p>
 
-## Creating a Server
+### 4. Creating a Server
 
 1. Now that we've defined a _schema_ and created an implementation method, our _resolver_ we now need some service to handle running this code, our _server_. 
 
@@ -249,3 +267,5 @@ node server.js
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/136555362-eb4f4a4b-a66e-403a-b386-b5f484f5bca7.png" width="450"/></p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/136556717-42f79b80-93de-4dea-9e4a-ce5848d5f050.png" width="450"/></p>
+
+### 5. Execute Queries on your GraphQL API
